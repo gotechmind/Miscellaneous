@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<h2>This is a Demo for Angular 7 , spring hateos app: </h2>
+<table *ngIf="fields">
+  <tr *ngFor="let field of fields">
+      <td>
+        <label [ngClass]="field.cssClass">{{field.label}}</label>
+      </td>
+    <td>
+      <input *ngIf="field.type=='text'" type="text">
+      <app-combobox *ngIf="field.type=='combo'" [(field)] = "field"></app-combobox>
+    </td> 
+  </tr>
+</table>
+
