@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+                    function fetchLatestData() {
+                        $.ajax( {
+                            url : 'http:\\\\localhost:8082\\data',
+                            success : function(result,status,xhr) {
+                                $("#data").html(result);
+                            }
+                        });
+                    }
+        </script>
+    </head>
+    <body>
+        <input type="button" onclick="fetchLatestData()" value="Click Me"></input>
+        <p>
+                Latest data value is::<span id="data">0<span>
+        </p>
+    </body>
+</html>
